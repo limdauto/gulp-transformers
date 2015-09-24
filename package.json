@@ -1,0 +1,28 @@
+{
+  "name": "gulp-transformers",
+  "version": "0.0.4",
+  "description": "A simple browserify transform factory to be used with gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/limdauto/gulp-transformers.git"
+  },
+  "keywords": [
+    "gulp",
+    "browserify",
+    "transform"
+  ],
+  "author": "Lim H. <limdauto@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/limdauto/gulp-transformers/issues"
+  },
+  "homepage": "https://github.com/limdauto/gulp-transformers",
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "through2": "^2.0.0"
+  }
+}

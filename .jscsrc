@@ -1,0 +1,17 @@
+{
+    "preset": "airbnb",
+    "requireDotNotation": null,
+    "requireCamelCaseOrUpperCaseIdentifiers": null,
+    "validateIndentation": 4,
+    "disallowSpacesInNamedFunctionExpression": null,
+    "disallowSpacesInFunctionExpression": null,
+    "disallowSpacesInAnonymousFunctionExpression": null,
+    "disallowSpacesInFunctionDeclaration": null,
+    "safeContextKeyword": "self",
+    "requirePaddingNewLinesAfterBlocks": null,
+    "validateQuoteMarks": null,
+    "requireTrailingComma": null,
+    "disallowMultipleVarDecl": null,
+    "disallowTrailingComma": true,
+    "disallowQuotedKeysInObjects": null
+}
