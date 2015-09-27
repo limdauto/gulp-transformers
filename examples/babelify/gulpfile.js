@@ -1,6 +1,5 @@
 'use strict';
 
-const buffer = require('vinyl-buffer');
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
