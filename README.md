@@ -20,7 +20,7 @@ let uglifyify = {
 
 gulp.task('default', () => {
     return gulp.src('./*.es6')
-        .pipe(transformers.get([babelify, uglifyify]))
+        .pipe(transformers.get(babelify, uglifyify))
         .pipe(gulp.dest('./dist'));
 });
 ```
@@ -31,11 +31,11 @@ For a more complicated example involving both pre-bundle and post-bundle process
 
 ## API
 
-### `transformers.get([{name, opts}])`
+### `transformers.get(...{name, opts})`
 
-Type: `Array`
+Type: `...Object`
 
-This function expects an array of transform's name along with its configuration.
+This function expects objects containing a transform's name and its corresponding options. Pass as many in as you like :)
 
 ### `transformers.none()`
 

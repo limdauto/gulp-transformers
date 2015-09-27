@@ -39,13 +39,13 @@ module.exports = {
         return _bundleStream([]);
     },
     /**
-     * @param {Array} transformers the list of transform names and configurations to be used
      * @return {Stream} a readable stream which is the final output of browserify.bundle
      *      after all transforms
      */
-    get(transformers) {
-        if (transformers === undefined || !Array.isArray(transformers))
-            throw "A string transformer name is required";
+    get() {
+        if (arguments.length === 0) return this.none();
+
+        let transformers = Object.keys(arguments).map(k => arguments[k]);
         return _bundleStream(transformers);
     }
 };
