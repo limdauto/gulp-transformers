@@ -9,6 +9,15 @@ npm install --save-dev gulp-transformers
 ### Usage
 
 ```javascript
+
+let babelify = {
+    name: 'babelify',
+    opts: { optional: ["runtime"]}
+};
+let uglifyify = {
+    name: 'uglifyify'
+};
+
 gulp.task('default', () => {
     return gulp.src('./*.es6')
         .pipe(transformers.get([babelify, uglifyify]))
