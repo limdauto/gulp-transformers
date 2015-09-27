@@ -53,7 +53,7 @@ Normal browserify transforms operate on standard Node's text stream. Gulp operat
 
 ### Why you may want this plugin
 
-The history of using browserify with gulp has been a bit tricky. In the beginning, there was a plugin called `gulp-browserify` but it was soon blacklisted (and rightly so). Then a popular tutorial popped up on Medium offering a way to accomplish this task through [vinyl-transform](https://www.npmjs.com/package/vinyl-transform). It looks pretty cool except for the fact that it has stopped working with newer browserify and, again, rightly so. The reason is `browserify.bundle` [returns a readable stream](https://github.com/substack/node-browserify/tree/37a805719dcf4d729fc7ff2b45bb6b01b367650b#bbundleopts-cb) where as vinyl-transform expects a duplex stream. Some related tickets for your amusement:
+The history of using browserify with gulp has been a bit tricky. In the beginning, there was a plugin called `gulp-browserify` but it was soon blacklisted (and rightly so). Then [a popular tutorial](https://medium.com/@sogko/gulp-browserify-the-gulp-y-way-bb359b3f9623) popped up on Medium offering a way to accomplish this task through [vinyl-transform](https://www.npmjs.com/package/vinyl-transform). It looks pretty cool except for the fact that it has stopped working with newer browserify and, again, rightly so. The reason is `browserify.bundle` [returns a readable stream](https://github.com/substack/node-browserify/tree/37a805719dcf4d729fc7ff2b45bb6b01b367650b#bbundleopts-cb) where as vinyl-transform expects a duplex stream. Some related tickets for your amusement:
 
 - https://github.com/substack/node-browserify/issues/1044
 - https://github.com/substack/node-browserify/issues/1217
