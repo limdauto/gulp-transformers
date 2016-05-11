@@ -10,19 +10,23 @@ npm install --save-dev gulp-transformers
 
 ```javascript
 
-let babelify = {
-    name: 'babelify',
-    opts: { optional: ["runtime"]}
-};
-let uglifyify = {
-    name: 'uglifyify'
+const babelify = {
+  name: 'babelify',
+  opts: {
+    presets: ["es2015"]
+  }
 };
 
-gulp.task('default', () => {
-    return gulp.src('./*.es6')
-        .pipe(transformers.get(babelify, uglifyify))
-        .pipe(gulp.dest('./dist'));
-});
+const uglifyify = {
+  name: 'uglifyify'
+};
+
+export function build() {
+  return gulp.src('./*.es6')
+    .pipe(transformers.get(babelify, uglifyify))
+    .pipe(gulp.dest('./dist'));
+};
+
 ```
 
 For a more complicated example involving both pre-bundle and post-bundle processing, see [examples](https://github.com/limdauto/gulp-transformers/tree/master/examples).
